@@ -1,0 +1,114 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TravelMate - Smart Travel Planner</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="brand">✈ TravelMate</div>
+        <p>Your personal smart travel planner</p>
+    </header>
+
+    <main class="container">
+        <section class="intro">
+            <h1>Plan Your Next Adventure</h1>
+            <p>Choose a destination, enter your trip details, and get a travel plan.</p>
+        </section>
+
+        <section class="planner">
+            <h2>Build Your Travel Plan</h2>
+
+            <form id="travelForm">
+                <label for="destination">Destination</label>
+                <select id="destination" name="destination" required>
+                    <option value="">Select a destination</option>
+                    <option value="Chikmagalur">Chikmagalur</option>
+                    <option value="Mysuru">Mysuru</option>
+                    <option value="Coorg">Coorg</option>
+                    <option value="Bengaluru">Bengaluru</option>
+                </select>
+
+                <div class="form-row">
+                    <div>
+                        <label for="days">Number of days</label>
+                        <input
+                            type="number"
+                            id="days"
+                            name="days"
+                            min="1"
+                            max="30"
+                            value="2"
+                            required
+                        >
+                    </div>
+
+                    <div>
+                        <label for="people">Number of people</label>
+                        <input
+                            type="number"
+                            id="people"
+                            name="people"
+                            min="1"
+                            max="20"
+                            value="2"
+                            required
+                        >
+                    </div>
+                </div>
+
+                <button type="submit" id="planButton">Generate Travel Plan</button>
+            </form>
+
+            <p id="status" class="status" role="status"></p>
+        </section>
+
+        <section id="result" class="result" hidden>
+            <h2>Your Travel Plan</h2>
+
+            <div class="summary">
+                <div class="summary-item">
+                    <span>Destination</span>
+                    <strong id="resultDestination"></strong>
+                </div>
+                <div class="summary-item">
+                    <span>Duration</span>
+                    <strong id="resultDays"></strong>
+                </div>
+                <div class="summary-item">
+                    <span>Travellers</span>
+                    <strong id="resultPeople"></strong>
+                </div>
+                <div class="summary-item">
+                    <span>Estimated budget</span>
+                    <strong id="resultBudget"></strong>
+                </div>
+            </div>
+
+            <div class="weather">
+                <h3>Weather information</h3>
+                <p id="resultWeather"></p>
+            </div>
+
+            <div class="places">
+                <h3>Suggested places to visit</h3>
+                <ul id="resultPlaces"></ul>
+            </div>
+
+            <p class="note">
+                Budget is a basic estimate, not a live quotation. Actual costs may vary.
+                Check current weather and local conditions before travelling.
+            </p>
+        </section>
+
+        <footer>
+            <p>TravelMate · Mini Autonomous Travel Agent Project</p>
+        </footer>
+    </main>
+
+    <script src="/script.js"></script>
+</body>
+</html>
