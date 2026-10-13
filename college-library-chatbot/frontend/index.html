@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>College Library Chatbot</title>
+
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+    <div class="chat-container">
+        <header>
+            <h1>📚 College Library Chatbot</h1>
+            <p>Your virtual library assistant</p>
+        </header>
+
+        <div id="chat-box" class="chat-box">
+            <div class="message bot">
+                Hello! 👋 Welcome to the college library.
+                Ask me whether a book is available.
+            </div>
+        </div>
+
+        <form id="chat-form">
+            <input
+                type="text"
+                id="user-input"
+                placeholder="Ask about a book..."
+                autocomplete="off"
+                required
+            >
+
+            <button type="submit" id="send-button">
+                Send
+            </button>
+        </form>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
